@@ -23,8 +23,8 @@ class ProjectsController < ApplicationController
     # ends_on: params[:project][:ends_on]
     # )
 
-    post = Project.new(project_params)
-    post.save
+    project = Project.new(project_params)
+    project.save
 
     redirect_to root_path
 

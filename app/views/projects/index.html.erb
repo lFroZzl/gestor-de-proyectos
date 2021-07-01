@@ -1,7 +1,6 @@
 <h1 class="text-center py-2">Projectos </h1>
 
 <div class="container">
-
     <form method="get">
         <%= select_tag :state, options_for_select(["All", "Proposal", "In Progress", "Finished"])%>
         <input type="submit" value="Buscar">
@@ -21,6 +20,6 @@
             <td><%= project.starts_on %></td>
             <td><%= project.ends_on %></td>
         </tr>
-    <% end %>
-</table>
+        <% end %>
+    </table>
 </div>
