@@ -1,0 +1,26 @@
+<h1 class="text-center py-2">Projectos </h1>
+
+<div class="container">
+
+    <form method="get">
+        <%= select_tag :state, options_for_select(["All", "Proposal", "In Progress", "Finished"])%>
+        <input type="submit" value="Buscar">
+    <table class="table">
+        <tr>
+            <td>Nombre</td>
+            <td>Descripcion</td>
+            <td>Estado</td>
+            <td>Fecha inicio</td>
+            <td>Fecha Termino</td>
+        </tr>
+        <% @projects.each do |project| %>
+        <tr>
+            <td><%= project.name %></td>
+            <td><%= project.description %></td>
+            <td><%= project.state %></td>
+            <td><%= project.starts_on %></td>
+            <td><%= project.ends_on %></td>
+        </tr>
+    <% end %>
+</table>
+</div>
