@@ -2,7 +2,7 @@
 
 <div class="container">
     <form method="get">
-        <%= select_tag :state, options_for_select(["All", "Proposal", "In Progress", "Finished"])%>
+        <%= select_tag :state, options_for_select(["All", "Proposal", "In Progress", "Finished"], @selected_state) %>
         <input type="submit" value="Buscar">
     <table class="table">
         <tr>

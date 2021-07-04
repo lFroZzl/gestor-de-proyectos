@@ -1,9 +1,9 @@
 class ProjectsController < ApplicationController
 
   def index
-    @select_state = 'All'
+    @selected_state = 'All'
     if params[:state].present? && params[:state] != 'All'
-      @select_state = params[:state]
+      @selected_state = params[:state]
       @projects = Project.where('state = ?', params[:state])
     else
       @projects = Project.all
